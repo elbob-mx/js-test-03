@@ -21,24 +21,30 @@ console.log(` <> Trabajando con condiciones <> `);
 const ciudadesDisponibles = new Array();
 
 ciudadesDisponibles.push("Bogotá");
-ciudadesDisponibles.push(" Caracas");
-ciudadesDisponibles.push(" Lima");
-ciudadesDisponibles.push(" Santiago");
+ciudadesDisponibles.push("Caracas");
+ciudadesDisponibles.push("Lima");
+ciudadesDisponibles.push("Santiago");
 console.log(ciudadesDisponibles);
 
 
 // edad / acompañado ------------------<>
 
+// variables ***
 const edadCliente = 25;
-const estaAcompanado = false; // variable booleana
+const estaAcompanado = false;
 const tieneBoleto = true;
+const ciudadDestino = "Caracas";
+const posicion = 0;
+
+// funciones ***
+console.log(ciudadesDisponibles);
 
 function cliente() {
   if (edadCliente >= 18 || estaAcompanado) {
     console.log(`Venta de boletos autorizado,`);
-    console.log(`Ciudades disponibles para viajar: `);
+    console.log(`Ciudades disponibles para viajar:`);
     console.log(ciudadesDisponibles + ". ");
-    console.log(`- Santiago. Buena elección.`)
+    // console.log(`- Santiago. Buena elección.`)
   } else {
     console.log(`El comprador NO es mayor de edad y NO está acompañado.`);
     console.log(`NO es posible ofrecer viajes.`);
@@ -50,6 +56,8 @@ cliente();
 
 // proceso de abordaje -----------------<>
 
+// funciones ***
+
 function abordaje() {
   if (tieneBoleto && (edadCliente >= 18 || estaAcompanado)) {
     console.log(`El cliente dispone de boleto y edad suficiente. Feliz viaje.`)
@@ -59,3 +67,13 @@ function abordaje() {
 };
 
 abordaje();
+
+
+while (posicion < ciudadesDisponibles.length) {
+  if (ciudadesDisponibles[posicion] == ciudadDestino) {
+    console.log(`Destino disponible.`);
+  } else {
+    console.log(`Destino NO disponible.`);
+  }
+  posicion++;
+};
