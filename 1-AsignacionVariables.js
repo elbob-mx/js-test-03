@@ -1,9 +1,11 @@
 console.log("Asignando valores a las variables");
 
 let miNombre = "Roberto";
-const miApellido = " Gutiérrez";
+const miApellido = "Gutiérrez";
 console.log(miNombre);
 
-miNombre = miNombre + miApellido;
+const miNombreCompleto = miNombre + " " + miApellido;
+console.log(miNombreCompleto);
 
-console.log(miNombre);
+const textoMiNombre = `Mi nombre es: ${miNombre} ${miApellido}`;
+console.log(textoMiNombre);
