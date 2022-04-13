@@ -33,8 +33,8 @@ console.log(ciudadesDisponibles);
 const edadCliente = 25;
 const estaAcompanado = false;
 const tieneBoleto = true;
-const ciudadDestino = "Caracas";
-const posicion = 0;
+const ciudadDestino = "Lima";
+let posicion = 0;
 
 // funciones ***
 console.log(ciudadesDisponibles);
@@ -72,6 +72,7 @@ abordaje();
 while (posicion < ciudadesDisponibles.length) {
   if (ciudadesDisponibles[posicion] == ciudadDestino) {
     console.log(`Destino disponible.`);
+    console.log(`Destino seleccionado: ` + ciudadesDisponibles[posicion]);
   } else {
     console.log(`Destino NO disponible.`);
   }
