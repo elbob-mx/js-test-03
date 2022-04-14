@@ -24,6 +24,8 @@ ciudadesDisponibles.push("Bogotá");
 ciudadesDisponibles.push("Caracas");
 ciudadesDisponibles.push("Lima");
 ciudadesDisponibles.push("Santiago");
+ciudadesDisponibles.push("Madrid");
+ciudadesDisponibles.push("Mazatlán");
 console.log(ciudadesDisponibles);
 
 
@@ -33,8 +35,8 @@ console.log(ciudadesDisponibles);
 const edadCliente = 25;
 const estaAcompanado = false;
 const tieneBoleto = true;
-const ciudadDestino = "Lima";
-let posicion = 0;
+const ciudadDestino = "Mazatlán";
+let i = 0;
 
 // funciones ***
 console.log(ciudadesDisponibles);
@@ -69,12 +71,12 @@ function abordaje() {
 abordaje();
 
 
-while (posicion < ciudadesDisponibles.length) {
-  if (ciudadesDisponibles[posicion] == ciudadDestino) {
+while (i < ciudadesDisponibles.length) {
+  if (ciudadesDisponibles[i] == ciudadDestino) {
     console.log(`Destino disponible.`);
-    console.log(`Destino seleccionado: ` + ciudadesDisponibles[posicion]);
+    console.log(`Destino seleccionado: ` + ciudadesDisponibles[i]);
   } else {
     console.log(`Destino NO disponible.`);
   }
-  posicion++;
+  i++;
 };
