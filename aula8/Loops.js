@@ -1,19 +1,3 @@
-// guia --------------------<>
-
-// console.log("mayor o igual que: ");
-// console.log(edadCliente >= 18);
-// console.log("mayor que: ");
-// console.log(edadCliente > 18);
-// console.log("menor o igual que: ");
-// console.log(edadCliente <= 18);
-// console.log("mayor que: ");
-// console.log(edadCliente < 18);
-// console.log("igual que: " /* un solo 'igual' sería darle un valor a 'edadCliente' */);
-// console.log(edadCliente == 18);
-// console.log("diferente de: ");
-// console.log(edadCliente != 18);
-
-
 console.log(` <> Trabajando con loops <> `);
 
 // destinos -------------------<>
@@ -38,9 +22,12 @@ const tieneBoleto = true;
 const ciudadDestino = "Mazatlán";
 let i = 0;
 let destinoDisponible = false;
+let clienteAutorizado = false;
+// console.log(ciudadesDisponibles);
+
+clienteAutorizado = (edadCliente >= 18 || estaAcompanado);
 
 // funciones ***
-// console.log(ciudadesDisponibles);
 
 function cliente() {
   if (edadCliente >= 18 || estaAcompanado) {
@@ -63,7 +50,7 @@ cliente();
 
 function abordaje() {
   if (tieneBoleto && (edadCliente >= 18 || estaAcompanado)) {
-    console.log(`El cliente dispone de boleto y edad suficiente. Gracias por viajar con Java Air. Feliz viaje.`)
+    console.log(`Revisión finalizada. El cliente dispone de boleto y edad suficiente. Gracias por viajar con Java Air. Feliz viaje.`)
   } else {
     console.log(`El cliente no dispone de boleto y/o edad suficiente. Embarque no autorizado.`)
   }
@@ -86,7 +73,16 @@ function abordaje() {
   }
 };
 
-console.log(`Destino disponible`, destinoDisponible);
-console.log(`Destino seleccionado: ` + ciudadesDisponibles[i] + ".");
+if(clienteAutorizado && destinoDisponible) {
+
+  console.log(`Venta autorizada. Cliente cumple requisitos.`);
+  console.log(`Destino seleccionado: ` + ciudadesDisponibles[i] + ".");  
+  console.log(`Destino disponible`, destinoDisponible);
+
+} else if (clienteAutorizado) {
+  console.log(`Venta no es posible. Cliente autorizado; destino no disponible.`);
+} else {
+  console.log(`Venta no autorizada.`);
+};
 
 abordaje();
