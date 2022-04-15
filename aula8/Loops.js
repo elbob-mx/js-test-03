@@ -16,7 +16,7 @@ ciudadesDisponibles.push("Lima");
 // edad / acompañado ------------------<>
 
 // variables ***
-const edadCliente = 25;
+const edadCliente = 15;
 const estaAcompanado = false;
 const tieneBoleto = true;
 const ciudadDestino = "Mazatlán";
