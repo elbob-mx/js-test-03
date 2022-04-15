@@ -14,7 +14,7 @@
 // console.log(edadCliente != 18);
 
 
-console.log(` <> Trabajando con condiciones <> `);
+console.log(` <> Trabajando con loops <> `);
 
 // destinos -------------------<>
 
@@ -22,10 +22,10 @@ const ciudadesDisponibles = new Array();
 
 ciudadesDisponibles.push("Bogotá");
 ciudadesDisponibles.push("Caracas");
-ciudadesDisponibles.push("Lima");
+ciudadesDisponibles.push("Mazatlán");
 ciudadesDisponibles.push("Santiago");
 ciudadesDisponibles.push("Madrid");
-ciudadesDisponibles.push("Mazatlán");
+ciudadesDisponibles.push("Lima");
 console.log(ciudadesDisponibles);
 
 
@@ -37,6 +37,7 @@ const estaAcompanado = false;
 const tieneBoleto = true;
 const ciudadDestino = "Mazatlán";
 let i = 0;
+let destinoDisponible = false;
 
 // funciones ***
 console.log(ciudadesDisponibles);
@@ -73,10 +74,11 @@ abordaje();
 
 while (i < ciudadesDisponibles.length) {
   if (ciudadesDisponibles[i] == ciudadDestino) {
-    console.log(`Destino disponible.`);
-    console.log(`Destino seleccionado: ` + ciudadesDisponibles[i]);
-  } else {
-    console.log(`Destino NO disponible.`);
+    destinoDisponible = true;
+    break;
   }
   i++;
 };
+
+console.log(`Destino disponible`, destinoDisponible);
+console.log(`Destino seleccionado: ` + ciudadesDisponibles[i] + ".");
