@@ -26,7 +26,7 @@ ciudadesDisponibles.push("Mazatlán");
 ciudadesDisponibles.push("Santiago");
 ciudadesDisponibles.push("Madrid");
 ciudadesDisponibles.push("Lima");
-console.log(ciudadesDisponibles);
+// console.log(ciudadesDisponibles);
 
 
 // edad / acompañado ------------------<>
@@ -40,7 +40,7 @@ let i = 0;
 let destinoDisponible = false;
 
 // funciones ***
-console.log(ciudadesDisponibles);
+// console.log(ciudadesDisponibles);
 
 function cliente() {
   if (edadCliente >= 18 || estaAcompanado) {
@@ -63,22 +63,30 @@ cliente();
 
 function abordaje() {
   if (tieneBoleto && (edadCliente >= 18 || estaAcompanado)) {
-    console.log(`El cliente dispone de boleto y edad suficiente. Feliz viaje.`)
+    console.log(`El cliente dispone de boleto y edad suficiente. Gracias por viajar con Java Air. Feliz viaje.`)
   } else {
     console.log(`El cliente no dispone de boleto y/o edad suficiente. Embarque no autorizado.`)
   }
 };
 
-abordaje();
 
 
-while (i < ciudadesDisponibles.length) {
-  if (ciudadesDisponibles[i] == ciudadDestino) {
+// while (i < ciudadesDisponibles.length) {
+  //   if (ciudadesDisponibles[i] == ciudadDestino) {
+    //     destinoDisponible = true;
+    //     break;
+    //   }
+    //   i++;
+    // };
+    
+    for(i = 0; i < ciudadesDisponibles.length; i++) {
+      if (ciudadesDisponibles[i] == ciudadDestino) {
     destinoDisponible = true;
     break;
   }
-  i++;
 };
 
 console.log(`Destino disponible`, destinoDisponible);
 console.log(`Destino seleccionado: ` + ciudadesDisponibles[i] + ".");
+
+abordaje();
